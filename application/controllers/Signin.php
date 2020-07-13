@@ -31,7 +31,8 @@ class Signin extends CI_Controller
             $this->session->set_userdata($newdata);
             redirect('user/Index_user');
         } else {
-            redirect('home');
+            $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-center" role="alert">Password atau email anda salah!</div>');
+            redirect('signin');
         }
     }
 }
