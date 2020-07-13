@@ -18,10 +18,10 @@
             </div>
             <div class="row mb-3">
                 <div class="col d-flex justify-content-center">
-                    <a href="signin.html" class="border-bottom-disabled">Masuk</a>
+                    <a href="<?php echo base_url() . 'Signin' ?>" class="border-bottom-disabled">Masuk</a>
                 </div>
                 <div class="col d-flex justify-content-center">
-                    <a href="signup.html" class="border-bottom">Daftar</a>
+                    <a href="<?php echo base_url() . 'Signup' ?>" class="border-bottom">Daftar</a>
                 </div>
             </div>
             <label for="inputEmail" class="sr-only">Email address</label>
