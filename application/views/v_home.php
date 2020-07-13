@@ -130,7 +130,7 @@
     <div>
         <div class="mt-5">
             <div class="col-sm-12 d-flex justify-content-center">
-                <a class="btn btn-cta btn-primary " href="signup.html" role="button">Coba</a>
+                <a class="btn btn-cta btn-primary " href="<?php echo site_url().'signup'?>" role="button">Coba</a>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@
 <div class="w-100 position-fixed zindex-10">
         <nav class="navbar navbar-expand-lg navbar-light navbar-user p-3">
 
-            <a class="navbar-brand ml-3" href="<?php echo site_url() . 'user/index' ?>">
+            <a class="navbar-brand ml-3" href="<?php echo site_url() . 'user/index_user' ?>">
                 <img width="100" src="<?php echo base_url() . 'assets/images/logo2.png' ?>" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
