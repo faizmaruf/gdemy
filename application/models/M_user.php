@@ -13,6 +13,10 @@ class M_user extends CI_Model
         $hsl = $this->db->get('tbl_users', $id);
         return $hsl;
     }
+    function getuserbyemail($email)
+    {
+        return $this->db->get_where('tbl_users', ['email' => $email])->row_array();
+    }
 
     function simpan_user($data)
     {

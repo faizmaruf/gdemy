@@ -9,11 +9,12 @@ class Index_user extends CI_Controller
             redirect($url);
         };
         $this->load->model('m_user');
+        $this->load->library('session');
         $this->load->library('upload');
     }
     public function index()
-    
-	{	
+	{	$email =$this->session->userdata('email');
+        $x['user']= $this->m_user->getuserbyemail($email);
         $x['active'] = 'Index';
 		$this->load->view('user/v_index',$x);
 		

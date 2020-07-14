@@ -1,9 +1,3 @@
-<?php
-          $id_user = $this->session->userdata('id');
-          $q = $this->db->query("SELECT * FROM tbl_users WHERE id='$id_user'");
-          $c = $q->row_array();
-          ?>
-
 <div class="w-100 position-fixed zindex-10">
         <nav class="navbar navbar-expand-lg navbar-light navbar-user p-3">
 
@@ -40,7 +34,7 @@
                                 <img src="/images/faiz.JPG" class="rounded-circle img-user-navbar" alt="gambaruser">
                                 <p>
                                     <!-- namauser -->
-                                    <small><?php echo $c['email']; ?> </small>
+                                    <small><?= $user['email']; ?></small>
                                 </p>
                             </li>
                             <!-- Menu Body -->
