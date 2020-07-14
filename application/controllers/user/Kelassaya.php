@@ -8,10 +8,16 @@ class Kelassaya extends CI_Controller
             $url = base_url('signin');
             redirect($url);
         };
+        $this->load->model('m_user');
+        $this->load->library('session');
+        $this->load->library('upload');
         
     }
 	public function index()
-	{	$x['active'] = 'Kelassaya';
+	{	
+        $email =$this->session->userdata('email');
+        $x['user']= $this->m_user->getuserbyemail($email);
+        $x['active'] = 'Kelassaya';
 		$this->load->view('user/v_kelas_saya',$x);
 		
 	}

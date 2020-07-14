@@ -42,7 +42,7 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <small class="font-nav-kecil">
-                                    <a href="edit_profile.html" class="btn btn-flat">Edit profil</a>
+                                    <a href="<?php echo base_url() . 'user/User/edit_user' ?>" class="btn btn-flat">Edit profil</a>
                                     <a href="<?php echo base_url() . 'user/User/logout' ?>" class="btn btn-flat">Keluar</a>
                                 </small>
                             </li>

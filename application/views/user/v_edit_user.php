@@ -43,13 +43,13 @@
                 </div>
                 <label for="inputNama" class="sr-only">nama</label>
                 <input type="name" id="inputNama" class="form-control mb-3" placeholder="nama" required
-                    value="Faiz Alauddin Ma'ruf" autofocus>
+                    value="<?= $user['nama']; ?>" autofocus>
                 <label for="inputEmail" class="sr-only">Email</label>
                 <input type="email" id="inputEmail" class="form-control mb-3" placeholder="email" required
-                    value="faiz.maruf8888@gmail.com">
+                    value="<?= $user['email']; ?>">
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" id="inputPassword" class="form-control mb-3" placeholder="Password"
-                    value="*********">
+                    value="<?= $user['user_password']; ?>">
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Simpan Profil</button>
             </form>
         </div>
