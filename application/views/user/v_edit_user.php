@@ -34,21 +34,18 @@
                                             <input type="file" name="..." id="inputImg" class="p-5" />
                                         </div>
                                     </div>
-                                    <img src="../images/faiz.JPG" alt="faiz" width="80px" height="80px"
-                                        class="rounded-circle edit-img">
+                                    <img src="../images/faiz.JPG" alt="faiz" width="80px" height="80px" class="rounded-circle edit-img">
                                 </div>
                             </label>
                         </div>
                     </div>
                 </div>
                 <label for="inputNama" class="sr-only">nama</label>
-                <input type="name" id="inputNama" class="form-control mb-3" placeholder="nama" required
-                    value="<?= $user['nama']; ?>" autofocus>
+                <input type="name" id="inputNama" class="form-control mb-3" placeholder="nama" required value="<?= $user['nama']; ?>" autofocus>
                 <label for="inputEmail" class="sr-only">Email</label>
-                <input type="email" id="inputEmail" class="form-control mb-3" placeholder="email" required
-                    value="<?= $user['email']; ?>">
+                <input type="email" id="inputEmail" class="form-control mb-3" placeholder="email" required value="<?= $user['email']; ?>">
                 <label for="inputNuptk" class="sr-only">nuptk</label>
-                <input type="name" id="inputNuptk" class="form-control mb-3" placeholder="nuptk" value="<?= $user['nuptk']?>">
+                <input type="name" id="inputNuptk" class="form-control mb-3" placeholder="nuptk" value="<?= $user['nuptk'] ?>">
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Simpan Profil</button>
             </form>
         </div>
@@ -78,16 +75,13 @@
     </footer>
     <!-- footer-end  -->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
 
 

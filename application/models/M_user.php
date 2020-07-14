@@ -4,15 +4,15 @@ class M_user extends CI_Model
 
     function get_all_user()
     {
-        $hsl = $this->db->get('tbl_users');
+        $hsl = $this->db->get('tbl_users')->result();
         return $hsl;
     }
 
     function get_all_userById($id)
     {
-        $hsl = $this->db->get('tbl_users', $id);
-        return $hsl;
+        return $this->db->get_where('tbl_users', ['id' => $id])->row_array();
     }
+
     function getuserbyemail($email)
     {
         return $this->db->get_where('tbl_users', ['email' => $email])->row_array();
@@ -24,7 +24,7 @@ class M_user extends CI_Model
     }
 
 
-	//UPDATE user //
+    //UPDATE user //
 
     function update_user($where, $data)
     {
@@ -33,8 +33,8 @@ class M_user extends CI_Model
     }
 
 
-	//END UPDATE user//
+    //END UPDATE user//
 
-   
+
 
 }

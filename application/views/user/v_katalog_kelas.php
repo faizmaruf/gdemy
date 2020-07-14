@@ -9,7 +9,7 @@
     <!-- navbar -->
     <?php $this->load->view('user/v_navbar_user'); ?>
     <!-- navbar-end -->
-    
+
     <!-- section1 -->
     <section>
         <div class="container">
@@ -32,205 +32,38 @@
         <div class="album py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 mb-5">
-                        <div class="card-1 card-border mb-4 shadow-sm bg-white shadow-lg">
-                            <div class="card-header bg-white">
-                                <div class="card-img-top ">
-                                    <div class="row p-3">
-                                        <div class="col-xl-4 d-flex justify-content-center">
-                                            <img width="100px" src="../images/interaktif.png" alt="alternatif"
-                                                class="mb-3">
-                                        </div>
-                                        <div class="col-xl-7 d-flex justify-content-center">
-                                            <p>Pembelajaran Interaktif</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body ">
-                                <h5 class="card-text text-dark">Bahan pelajaran dimana guru sebagai pemeran utama
-                                    dalam
-                                    mengatur
-                                    suhu keaktifan siswa.</h5>
-                            </div>
-                            <div class="d-flex justify-content-end ">
-                                <div class="row ">
-                                    <div class="col p-5">
-                                        <div class="col border button-mulai rounded">
-                                            <a href="#" class="text-dark">Mulai Belajar</a>
+                    <?php foreach ($tbl_viewkelas as $vk) { ?>
+                        <div class="col-md-4 mb-5">
+                            <div class="card-1 card-border mb-4 shadow-sm bg-white shadow-lg">
+                                <div class="card-header bg-white">
+                                    <div class="card-img-top ">
+                                        <div class="row p-3">
+                                            <div class="col-xl-4 d-flex justify-content-center">
+                                                <img width="100px" src="../images/interaktif.png" alt="alternatif" class="mb-3">
+                                            </div>
+                                            <div class="col-xl-7 d-flex justify-content-center">
+                                                <p><?= $vk['nama_viewkelas'] ?></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-5">
-                        <div class="card-1 card-border mb-4 shadow-sm bg-white shadow-lg">
-                            <div class="card-header bg-white">
-                                <div class="card-img-top ">
-                                    <div class="row p-3">
-                                        <div class="col-xl-4 d-flex justify-content-center">
-                                            <img width="100px" src="../images/word.png" alt="alternatif" class="mb-3">
-                                        </div>
-                                        <div class="col-xl-7 d-flex justify-content-center">
-                                            <p>Pembelajaran Interaktif</p>
-                                        </div>
-                                    </div>
+                                <div class="card-body ">
+                                    <h5 class="card-text text-dark"><?= $vk['deskripsi_viewkelas'] ?>.</h5>
                                 </div>
-                            </div>
-                            <div class="card-body ">
-                                <h5 class="card-text text-dark">Bahan pelajaran dimana guru sebagai pemeran utama
-                                    dalam
-                                    mengatur
-                                    suhu keaktifan siswa.</h5>
-                            </div>
-                            <div class="d-flex justify-content-end ">
-                                <div class="row ">
-                                    <div class="col p-5">
-                                        <div class="col border button-mulai rounded">
-                                            <a href="#" class="text-dark">Mulai Belajar</a>
+                                <div class="d-flex justify-content-end ">
+                                    <div class="row ">
+                                        <div class="col p-5">
+                                            <div class="col">
+                                                <form action="<?= site_url('user/katalogkelas/kelassaya/') . $vk['id_viewkelas'] ?>">
+                                                    <input class="btn btn-sm btn-info" type="submit" value="Mulai Belajar" name="mulai_belajar">
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-md-4 mb-5">
-                        <div class="card-1 card-border mb-4 shadow-sm bg-white shadow-lg">
-                            <div class="card-header bg-white">
-                                <div class="card-img-top ">
-                                    <div class="row p-3">
-                                        <div class="col-xl-4 d-flex justify-content-center">
-                                            <img width="100px" src="../images/excel.png" alt="alternatif" class="mb-3">
-                                        </div>
-                                        <div class="col-xl-7 d-flex justify-content-center">
-                                            <p>Pembelajaran Interaktif</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body ">
-                                <h5 class="card-text text-dark">Bahan pelajaran dimana guru sebagai pemeran utama
-                                    dalam
-                                    mengatur
-                                    suhu keaktifan siswa.</h5>
-                            </div>
-                            <div class="d-flex justify-content-end ">
-                                <div class="row ">
-                                    <div class="col p-5">
-                                        <div class="col border button-mulai rounded">
-                                            <a href="#" class="text-dark">Mulai Belajar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-5">
-                        <div class="card-1 card-border mb-4 shadow-sm bg-white shadow-lg">
-                            <div class="card-header bg-white">
-                                <div class="card-img-top ">
-                                    <div class="row p-3">
-                                        <div class="col-xl-4 d-flex justify-content-center">
-                                            <img width="100px" src="../images/interaktif.png" alt="alternatif"
-                                                class="mb-3">
-                                        </div>
-                                        <div class="col-xl-7 d-flex justify-content-center">
-                                            <p>Pembelajaran Interaktif</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body ">
-                                <h5 class="card-text text-dark">Bahan pelajaran dimana guru sebagai pemeran utama
-                                    dalam
-                                    mengatur
-                                    suhu keaktifan siswa.</h5>
-                            </div>
-                            <div class="d-flex justify-content-end ">
-                                <div class="row ">
-                                    <div class="col p-5">
-                                        <div class="col border button-mulai rounded">
-                                            <a href="#" class="text-dark">Mulai Belajar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-5">
-                        <div class="card-1 card-border mb-4 shadow-sm bg-white shadow-lg">
-                            <div class="card-header bg-white">
-                                <div class="card-img-top ">
-                                    <div class="row p-3">
-                                        <div class="col-xl-4 d-flex justify-content-center">
-                                            <img width="100px" src="../images/interaktif.png" alt="alternatif"
-                                                class="mb-3">
-                                        </div>
-                                        <div class="col-xl-7 d-flex justify-content-center">
-                                            <p>Pembelajaran Interaktif</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body ">
-                                <h5 class="card-text text-dark">Bahan pelajaran dimana guru sebagai pemeran utama
-                                    dalam
-                                    mengatur
-                                    suhu keaktifan siswa.</h5>
-                            </div>
-                            <div class="d-flex justify-content-end ">
-                                <div class="row ">
-                                    <div class="col p-5">
-                                        <div class="col border button-mulai rounded">
-                                            <a href="#" class="text-dark">Mulai Belajar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-5">
-                        <div class="card-1 card-border mb-4 shadow-sm bg-white shadow-lg">
-                            <div class="card-header bg-white">
-                                <div class="card-img-top ">
-                                    <div class="row p-3">
-                                        <div class="col-xl-4 d-flex justify-content-center">
-                                            <img width="100px" src="../images/interaktif.png" alt="alternatif"
-                                                class="mb-3">
-                                        </div>
-                                        <div class="col-xl-7 d-flex justify-content-center">
-                                            <p>Pembelajaran Interaktif</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body ">
-                                <h5 class="card-text text-dark">Bahan pelajaran dimana guru sebagai pemeran utama
-                                    dalam
-                                    mengatur
-                                    suhu keaktifan siswa.</h5>
-                            </div>
-                            <div class="d-flex justify-content-end ">
-                                <div class="row ">
-                                    <div class="col p-5">
-                                        <div class="col border button-mulai rounded">
-                                            <a href="#" class="text-dark">Mulai Belajar</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -257,16 +90,13 @@
     </footer>
     <!-- footer-end  -->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
 
 
