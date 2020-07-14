@@ -16,7 +16,7 @@
             <form class="form-signin">
                 <div class="row mb-4">
                     <div class="col d-flex justify-content-center">
-                        <img width="115" src="../images/Logo.png" alt="logo">
+                        <img width="115" src="<?php echo base_url() . 'assets/images/logo.png' ?>" alt="logo">
                     </div>
                 </div>
                 <div class="row mb-1">
@@ -47,9 +47,8 @@
                 <label for="inputEmail" class="sr-only">Email</label>
                 <input type="email" id="inputEmail" class="form-control mb-3" placeholder="email" required
                     value="<?= $user['email']; ?>">
-                <label for="inputPassword" class="sr-only">Password</label>
-                <input type="password" id="inputPassword" class="form-control mb-3" placeholder="Password"
-                    value="<?= $user['user_password']; ?>">
+                <label for="inputNuptk" class="sr-only">nuptk</label>
+                <input type="name" id="inputNuptk" class="form-control mb-3" placeholder="nuptk" value="<?= $user['nuptk']?>">
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Simpan Profil</button>
             </form>
         </div>
