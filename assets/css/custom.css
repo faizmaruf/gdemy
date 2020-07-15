@@ -7,10 +7,6 @@ body {
 	background-color: white;
 }
 
-.img-input {
-	background-image: url("/images/camera.png");
-}
-
 .col-xl-7 p {
 	font-size: large;
 	color: black;
@@ -253,7 +249,7 @@ nav {
 }
 
 .select-wrapper {
-	background: url("/images/camera.png") no-repeat;
+	background: url("http://localhost:8888/gdemy/assets/images/camera.png") no-repeat;
 	background-size: cover;
 	width: 33px;
 	height: 26px;

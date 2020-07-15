@@ -31,10 +31,11 @@
                                 <div class="row d-flex justify-content-center">
                                     <div class="zindex-10 col d-flex justify-content-center position-absolute">
                                         <div class="row mt-4 d-flex justify-content-center select-wrapper">
+                                            <i class="fa fa-camera" style="font-size:20px;color:white"></i>
                                             <input type="file" name="..." id="inputImg" class="p-5" />
                                         </div>
                                     </div>
-                                    <img src="../images/faiz.JPG" alt="faiz" width="80px" height="80px" class="rounded-circle edit-img">
+                                    <img src="<?php echo base_url() . 'assets/images/logo2.png' ?>" alt="gambar-user" width="80px" height="80px" class="rounded-circle edit-img">
                                 </div>
                             </label>
                         </div>
