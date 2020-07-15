@@ -27,5 +27,4 @@ class User extends CI_Controller
 		$url = base_url('signin');
 		redirect($url);
 	}
-	
 }

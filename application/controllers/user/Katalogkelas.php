@@ -37,7 +37,7 @@ class Katalogkelas extends CI_Controller
             'gambar_kelas' => $cektblpilihkelas['gambar_viewkelas']
         );
         $this->m_kelas->simpanPilihKelas($data);
-        // redirect('Signin');
+        // redirect('user/kelasbelajar');
         echo 'hai';
     }
 }

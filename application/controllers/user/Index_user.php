@@ -1,7 +1,7 @@
-<?php 
+<?php
 class Index_user extends CI_Controller
 {
-	public function __construct()
+    public function __construct()
     {
         parent::__construct();
         if (!isset($_SESSION['logged_in'])) {
@@ -9,24 +9,16 @@ class Index_user extends CI_Controller
             redirect($url);
         };
         $this->load->model('m_user');
+        $this->load->model('m_kelas');
         $this->load->library('session');
         $this->load->library('upload');
     }
     public function index()
-	{	$email =$this->session->userdata('email');
-        $x['user']= $this->m_user->getuserbyemail($email);
+    {
+        $email = $this->session->userdata('email');
+        $x['user'] = $this->m_user->getuserbyemail($email);
+        $x['pilihkelas'] = $this->m_kelas->getPilihkelasbyemail($email);
         $x['active'] = 'Index';
-		$this->load->view('user/v_index',$x);
-		
+        $this->load->view('user/v_index', $x);
     }
-    function kelasbelajar()
-    {   
-        $email =$this->session->userdata('email');
-        $x['user']= $this->m_user->getuserbyemail($email);
-        $x['active'] = 'Index';
-        $this->load->view('user/v_kelas_belajar',$x);
-    }
-	
-	
-
 }
