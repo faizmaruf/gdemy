@@ -18,7 +18,14 @@ class Index_user extends CI_Controller
         $x['active'] = 'Index';
 		$this->load->view('user/v_index',$x);
 		
-	}
+    }
+    function kelasbelajar()
+    {   
+        $email =$this->session->userdata('email');
+        $x['user']= $this->m_user->getuserbyemail($email);
+        $x['active'] = 'Index';
+        $this->load->view('user/v_kelas_belajar',$x);
+    }
 	
 	
 
