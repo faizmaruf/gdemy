@@ -35,7 +35,7 @@
                                             <input type="file" name="..." id="inputImg" class="p-5" />
                                         </div>
                                     </div>
-                                    <img src="<?php echo base_url() . 'assets/images/logo2.png' ?>" alt="gambar-user" width="80px" height="80px" class="rounded-circle edit-img">
+                                    <img src="..." alt="gambar-user" width="80px" height="80px" class="rounded-circle edit-img">
                                 </div>
                             </label>
                         </div>
