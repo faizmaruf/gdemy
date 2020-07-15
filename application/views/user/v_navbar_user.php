@@ -24,14 +24,14 @@
 
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="/images/faiz.JPG" width="40px" height="40px" class="rounded-circle"
+                            <img src="<?php echo base_url() . 'assets/images/user/' . $user['image']; ?>" width="40px" height="40px" class="rounded-circle"
                                 alt="gambaruser">
 
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="/images/faiz.JPG" class="rounded-circle img-user-navbar" alt="gambaruser">
+                                <img src="<?php echo base_url() . 'assets/images/user/' . $user['image']; ?>" class="rounded-circle img-user-navbar" alt="gambaruser">
                                 <p>
                                     <!-- namauser -->
                                     <small><?= $user['email']; ?></small>
