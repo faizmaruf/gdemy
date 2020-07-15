@@ -53,11 +53,11 @@
                                 <div class="d-flex justify-content-end ">
                                     <div class="row ">
                                         <div class="col p-5">
-                                            <div class="col">
                                                 <form action="<?= site_url('user/katalogkelas/kelassaya/') . $vk['id_viewkelas'] ?>">
-                                                    <input class="btn btn-sm btn-info" type="submit" value="Mulai Belajar" name="mulai_belajar">
+                                                    <div class="col border button-mulai rounded">
+                                                        <a href="#" class="text-dark">Lanjut Belajar</a>
+                                                    </div>
                                                 </form>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
