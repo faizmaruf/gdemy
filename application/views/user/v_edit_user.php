@@ -11,9 +11,11 @@
     <!-- navbar-end -->
 
     <!-- section1 -->
+    
     <section>
+    
         <div class="position-card">
-            <form class="form-signin">
+            <form class="form-signin" action="<?php echo site_url() . 'user/User/update_user' ?>" method="post" enctype="multipart/form-data">
                 <div class="row mb-4">
                     <div class="col d-flex justify-content-center">
                         <img width="115" src="<?php echo base_url() . 'assets/images/logo.png' ?>" alt="logo">
@@ -31,32 +33,35 @@
                                 <div class="row d-flex justify-content-center">
                                     <div class="zindex-10 col d-flex justify-content-center position-absolute">
                                         <div class="row mt-4 d-flex justify-content-center select-wrapper">
-                                            <input type="file" name="..." id="inputImg" class="p-5" />
+                                            <i class="fa fa-camera" style="font-size:20px;color:white"></i>
+                                            <input type="file" name="xgambar_user" id="inputImg" class="p-5" required/>
                                         </div>
                                     </div>
-                                    <img src="../images/faiz.JPG" alt="faiz" width="80px" height="80px" class="rounded-circle edit-img">
+                                    <img src="<?php echo base_url() . 'assets/images/user/' . $user['image']; ?>" alt="gambar-user" width="80px" height="80px" class="rounded-circle edit-img">
                                 </div>
                             </label>
                         </div>
                     </div>
                 </div>
                 <label for="inputNama" class="sr-only">nama</label>
-                <input type="name" id="inputNama" class="form-control mb-3" placeholder="nama" required value="<?= $user['nama']; ?>" autofocus>
+                <input type="hidden" name="xid" value="<?= $user['id']; ?>"/> 
+                <input type="name" id="inputNama" name="xnama" class="form-control mb-3" placeholder="nama" required value="<?= $user['nama']; ?>" autofocus>
                 <label for="inputEmail" class="sr-only">Email</label>
-                <input type="email" id="inputEmail" class="form-control mb-3" placeholder="email" required value="<?= $user['email']; ?>">
+                <input type="email" id="inputEmail" name="xemail" class="form-control mb-3" placeholder="email" required value="<?= $user['email']; ?>">
                 <label for="inputNuptk" class="sr-only">nuptk</label>
-                <input type="name" id="inputNuptk" class="form-control mb-3" placeholder="nuptk" value="<?= $user['nuptk'] ?>">
+                <input type="name" id="inputNuptk" name="xnuptk" class="form-control mb-3" placeholder="nuptk" value="<?= $user['nuptk'] ?>">
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Simpan Profil</button>
             </form>
         </div>
     </section>
     <!-- section1-end  -->
-
+    
     <!-- section2 kelas list -->
     <!-- section2-end -->
-
+    
     <!-- footer  -->
     <footer class="footer position-card">
+        <?= $this->session->flashdata('message'); ?>
 
         <div class="col-sm-12 d-flex justify-content-center mb-3">
             <div class="row">
