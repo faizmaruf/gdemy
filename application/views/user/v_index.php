@@ -21,7 +21,7 @@
                             <p class="mt-5">
                                 Semangat guru, <br> Semangat meningkatkan mutu pendidikan.
                             </p>
-                            <a href="katalog_kelas.html" class="btn btn-primary mt-3">Pilih Kelas</a>
+                            <a href="<?php echo site_url() . 'user/katalogkelas' ?>" class="btn btn-primary mt-3">Pilih Kelas</a>
                         </div>
                         <div class="col-md-6 d-none d-sm-none d-md-block">
                             <img width="380px" src="<?php echo base_url() . 'assets/images/bu_guru.png' ?>" alt="buguru">

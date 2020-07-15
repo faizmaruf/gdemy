@@ -89,7 +89,7 @@
         </div>
     </section>
     <aside class="col-md-2 col-lg-2 bg-white sidebar">
-        <a href="#" class="" style="font-size:14px;color:#016D77"><i class="fa fa-arrow-left ml-1 mr-2 mb-1"
+        <a href="<?php echo site_url() . 'user/index_user' ?>" class="" style="font-size:14px;color:#016D77"><i class="fa fa-arrow-left ml-1 mr-2 mb-1"
                 style="font-size:18px;color:#016D77"></i>Kelaman utama</a>
         <div class="sidebar-sticky border">
             <ul class="nav flex-column">
