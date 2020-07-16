@@ -24,6 +24,7 @@ class Signup extends CI_Controller
 		} else {
 			$data = array(
 				'email' => $email,
+				'image' => 'imagedf.png',
 				'user_password' => password_hash($psw1, PASSWORD_DEFAULT)
 			);
 			$this->m_user->simpan_user($data);

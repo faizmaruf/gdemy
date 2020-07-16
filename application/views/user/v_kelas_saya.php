@@ -39,7 +39,7 @@
                                     <div class="card-img-top ">
                                         <div class="row p-3">
                                             <div class="col-xl-4 d-flex justify-content-center">
-                                                <img width="100px" src="../images/word.png" alt="alternatif" class="mb-3">
+                                                <img width="100px" src="<?php echo base_url() . 'assets/images/' . $pk['gambar_kelas']; ?>" alt="alternatif" class="mb-3">
                                             </div>
                                             <div class="col-xl-7 d-flex justify-content-center">
                                                 <p><?= $pk['nama_kelas'] ?></p>
@@ -48,10 +48,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body ">
-                                    <h5 class="card-text text-dark">Bahan pelajaran dimana guru sebagai pemeran utama
-                                        dalam
-                                        mengatur
-                                        suhu keaktifan siswa.</h5>
+                                    <h5 class="card-text text-dark"><?= $pk['deskripsi'] ?></h5>
                                 </div>
                                 <div class="d-flex justify-content-end ">
                                     <div class="row ">

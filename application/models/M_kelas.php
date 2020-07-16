@@ -1,10 +1,21 @@
 <?php
+
 class M_kelas extends CI_Model
 {
     // private $_table = 'tbl_viewkelas';
     public function getAllViewKelas()
     {
         return $this->db->get('tbl_viewkelas')->result_array();
+    }
+
+    public function getAllDetailKelas()
+    {
+        return $this->db->get('tbl_detail_kelas')->result_array();
+    }
+
+    public function getDetailKelasById($id)
+    {
+        return $this->db->get_where('tbl_detail_kelas', ['id_kelas' => $id])->row_array();
     }
 
     //simpan ke tbl_pilih kelas

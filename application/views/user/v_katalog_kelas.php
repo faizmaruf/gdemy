@@ -39,7 +39,7 @@
                                     <div class="card-img-top ">
                                         <div class="row p-3">
                                             <div class="col-xl-4 d-flex justify-content-center">
-                                                <img width="100px" src="../images/interaktif.png" alt="alternatif" class="mb-3">
+                                                <img width="100px" src="<?php echo base_url() . 'assets/images/' . $vk['gambar_viewkelas']; ?>" alt="alternatif" class="mb-3">
                                             </div>
                                             <div class="col-xl-7 d-flex justify-content-center">
                                                 <p><?= $vk['nama_viewkelas'] ?></p>
@@ -53,11 +53,11 @@
                                 <div class="d-flex justify-content-end ">
                                     <div class="row ">
                                         <div class="col p-5">
-                                                <form action="<?= site_url('user/katalogkelas/kelassaya/') . $vk['id_viewkelas'] ?>">
-                                                    <div class="col border button-mulai rounded">
-                                                        <a href="#" class="text-dark">Lanjut Belajar</a>
-                                                    </div>
-                                                </form>
+
+                                            <div class="col border button-mulai rounded">
+                                                <a href="<?= site_url('user/katalogkelas/kelassaya/') . $vk['id_viewkelas'] ?>" class="text-dark">Mulai Belajar</a>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>

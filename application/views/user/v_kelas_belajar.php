@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gdemy</title>
-    <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/bootstrap.css' ?>">  
+    <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/bootstrap.css' ?>">
     <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/custom.css' ?>">
     <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/kelas_belajar.css' ?>">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -20,8 +20,7 @@
             <a class="navbar-brand ml-3" href="<?php echo site_url() . 'user/index_user' ?>">
                 <img width="100" src="<?php echo base_url() . 'assets/images/logo2.png' ?>" alt="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -32,14 +31,13 @@
 
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="/images/faiz.JPG" width="40px" height="40px" class="rounded-circle"
-                                alt="gambaruser">
+                            <img src="<?php echo base_url() . 'assets/images/user/' . $user['image']; ?>"" width=" 40px" height="40px" class="rounded-circle" alt="gambaruser">
 
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="/images/faiz.JPG" class="rounded-circle img-user-navbar" alt="gambaruser">
+                                <img src="<?php echo base_url() . 'assets/images/user/' . $user['image']; ?>"" class=" rounded-circle img-user-navbar" alt="gambaruser">
                                 <p>
                                     <!-- namauser -->
                                     <small><?= $user['email']; ?></small>
@@ -52,8 +50,7 @@
                                 <small class="font-nav-kecil">
                                     <a href="<?php echo base_url() . 'user/User/edit_user' ?>" class="btn btn-flat">Edit
                                         profil</a>
-                                    <a href="<?php echo base_url() . 'user/User/logout' ?>"
-                                        class="btn btn-flat">Keluar</a>
+                                    <a href="<?php echo base_url() . 'user/User/logout' ?>" class="btn btn-flat">Keluar</a>
                                 </small>
                             </li>
                         </ul>
@@ -70,13 +67,11 @@
             <div class="col-md-2 p-3 bg-light d-none d-sm-none d-md-block">
 
             </div>
-            <div class="col-md-10   box-video">
+            <div class="col-md-10 box-video">
                 <div class="row">
                     <div class="col container">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe
-                                src="https://www.youtube.com/embed/TVbzngJPqEQ?modestbranding=1&showinfo=0&rel=0&cc_load_policy=1"
-                                width="560" height="315" frameborder="0"></iframe>
+                            <?= $kelas_sekarang['link_materi'] ?>
                         </div>
                         <div class="mt-1">
                             <a href="#" class="btn btn-light border">Kembali</a>
@@ -89,46 +84,16 @@
         </div>
     </section>
     <aside class="col-md-2 col-lg-2 bg-white sidebar">
-        <a href="<?php echo site_url() . 'user/index_user' ?>" class="" style="font-size:14px;color:#016D77"><i class="fa fa-arrow-left ml-1 mr-2 mb-1"
-                style="font-size:18px;color:#016D77"></i>Kelaman utama</a>
+        <a href="<?php echo site_url() . 'user/index_user' ?>" class="" style="font-size:14px;color:#016D77"><i class="fa fa-arrow-left ml-1 mr-2 mb-1" style="font-size:18px;color:#016D77"></i>Kelaman utama</a>
         <div class="sidebar-sticky border">
             <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link " href="#">
-
-                        Dashboard <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item mt-2">
-                    <a class="nav-link active-sidebar" href="#">
-
-                        Orders
-                    </a>
-                </li>
-                <li class="nav-item mt-2">
-                    <a class="nav-link" href="#">
-
-                        Products
-                    </a>
-                </li>
-                <li class="nav-item mt-2">
-                    <a class="nav-link" href="#">
-
-                        Customers
-                    </a>
-                </li>
-                <li class="nav-item mt-2">
-                    <a class="nav-link" href="#">
-
-                        Reports
-                    </a>
-                </li>
-                <li class="nav-item mt-2">
-                    <a class="nav-link" href="#">
-
-                        Integrations
-                    </a>
-                </li>
+                <?php foreach ($detailkelas as $dk) : ?>
+                    <li class="nav-item mt-2">
+                        <a class="nav-link active-sidebar" href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $dk['id_kelas'] ?>">
+                            <?= $dk['nama_materi'] ?> <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
             </ul>
         </div>
 
@@ -271,16 +236,13 @@
     </footer> -->
     <!-- footer-end  -->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
 
 

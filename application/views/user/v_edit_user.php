@@ -33,7 +33,7 @@
                                 <div class="row d-flex justify-content-center">
                                     <div class="zindex-10 col d-flex justify-content-center position-absolute">
                                         <div class="row mt-4 d-flex justify-content-center select-wrapper">
-                                            <i class="fa fa-camera" style="font-size:20px;color:white"></i>
+                                        
                                             <input type="file" name="xgambar_user" id="inputImg" class="p-5" required/>
                                         </div>
                                     </div>

@@ -13,6 +13,7 @@ class Katalogkelas extends CI_Controller
         $this->load->library('session');
         $this->load->library('upload');
     }
+
     public function index()
     {
         $email = $this->session->userdata('email');
@@ -25,9 +26,13 @@ class Katalogkelas extends CI_Controller
     public function kelassaya($id)
     {
         $cektblpilihkelas = $this->m_kelas->get_all_viewkelas_id($id);
-
         $iduser = $this->session->userdata('email');
         $cekuser = $this->m_user->getuserbyemail($iduser);
+
+        $x['user'] = $cekuser;
+        $x['detailkelas'] = $this->m_kelas->getAllDetailKelas();
+        $x['kelas_sekarang'] = $this->m_kelas->getDetailKelasById($id);
+
 
         $data = array(
             'id_viewkelas' => $cektblpilihkelas['id_viewkelas'],
@@ -38,6 +43,7 @@ class Katalogkelas extends CI_Controller
         );
         $this->m_kelas->simpanPilihKelas($data);
         // redirect('user/kelasbelajar');
-        echo 'hai';
+        // echo 'hai';
+        $this->load->view("user/v_kelas_belajar", $x);
     }
 }
