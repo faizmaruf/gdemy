@@ -54,7 +54,7 @@
                                     <div class="row ">
                                         <div class="col p-5">
                                             <div class="col border button-mulai rounded">
-                                                <a href="#" class="text-dark">Lanjut Belajar</a>
+                                                <a href="<?= site_url('user/kelas_belajar/index/') . $pk['id_viewkelas'] ?>" class="text-dark">Lanjut Belajar</a>
                                             </div>
                                         </div>
                                     </div>

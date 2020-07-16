@@ -25,25 +25,29 @@ class Katalogkelas extends CI_Controller
 
     public function kelassaya($id)
     {
-        $cektblpilihkelas = $this->m_kelas->get_all_viewkelas_id($id);
+        $cektblviewkelas = $this->m_kelas->get_all_viewkelas_id($id);
         $iduser = $this->session->userdata('email');
         $cekuser = $this->m_user->getuserbyemail($iduser);
+        $cekidkelas = $this->m_kelas->getAllPilihKelasById($id);
 
         $x['user'] = $cekuser;
-        $x['detailkelas'] = $this->m_kelas->getAllDetailKelas();
+        $x['detailkelas'] = $this->m_kelas->getAllDetailKelas($id);
         $x['kelas_sekarang'] = $this->m_kelas->getDetailKelasById($id);
 
-
-        $data = array(
-            'id_viewkelas' => $cektblpilihkelas['id_viewkelas'],
-            'email' => $cekuser['email'],
-            'nama_kelas' => $cektblpilihkelas['nama_viewkelas'],
-            'deskripsi' => $cektblpilihkelas['deskripsi_viewkelas'],
-            'gambar_kelas' => $cektblpilihkelas['gambar_viewkelas']
-        );
-        $this->m_kelas->simpanPilihKelas($data);
-        // redirect('user/kelasbelajar');
-        // echo 'hai';
-        $this->load->view("user/v_kelas_belajar", $x);
+        if ($cektblviewkelas['id_viewkelas'] == $cekidkelas['id_viewkelas']) {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger d-flex justify-content-center" role="alert">Hanya Bisa memilih kelas yang sama satu kali</div>');
+            redirect('user/katalogkelas', $x);
+        } else {
+            $data = array(
+                'id_viewkelas' => $cektblviewkelas['id_viewkelas'],
+                'email' => $cekuser['email'],
+                'nama_kelas' => $cektblviewkelas['nama_viewkelas'],
+                'deskripsi' => $cektblviewkelas['deskripsi_viewkelas'],
+                'gambar_kelas' => $cektblviewkelas['gambar_viewkelas']
+            );
+            $this->m_kelas->simpanPilihKelas($data);
+            // $this->load->view("user/v_kelas_belajar", $x);
+            redirect('user/kelas_belajar/index/' . $cektblviewkelas['id_viewkelas']);
+        }
     }
 }
