@@ -15,6 +15,7 @@ class Kelas_belajar extends CI_Controller
         $x['user'] = $this->m_user->getuserbyemail($email);
         $x['detailkelas'] = $this->m_kelas->getAllDetailKelas($id);
         $x['kelas_sekarang'] = $this->m_kelas->getDetailKelasById($id);
+        $x['detailmaterisekarang'] = $this->m_kelas->getDetailMateriById($id);
         $x['active'] = 'kelas_belajar';
         $this->load->view('user/v_kelas_belajar', $x);
     }
@@ -22,9 +23,12 @@ class Kelas_belajar extends CI_Controller
     public function detailkelas($id)
     {
         $email = $this->session->userdata('email');
+        $iduser = $this->session->userdata('email');
         $x['user'] = $this->m_user->getuserbyemail($email);
         $x['detailkelas'] = $this->m_kelas->getAllDetailKelas($id);
+        $x['detailmaterisekarang'] = $this->m_kelas->getDetailMateriById($id);
         $x['active'] = 'kelas_belajar';
+
         $this->load->view('user/v_kelas_belajar', $x);
     }
 }

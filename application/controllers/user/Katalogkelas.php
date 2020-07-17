@@ -33,7 +33,8 @@ class Katalogkelas extends CI_Controller
         $id_materikls = $this->m_kelas->get_all_materi_id($id);
         $x['user'] = $cekuser;
         $x['detailkelas'] = $this->m_kelas->getAllDetailKelas($id);
-        $x['kelas_sekarang'] = $this->m_kelas->getDetailKelasById($id);
+        $x['kelas_sekarang'] = $this->m_kelas->get_all_materi_id($id);
+        $x['detailmaterisekarang'] = $this->m_kelas->getDetailMateriById($id);
 
         //cek user udah milih kelas yang sama apa ngga
         // if ($iduser && $cektblviewkelas['id_viewkelas'] == $cekidkelas['id_viewkelas']) {
@@ -56,6 +57,6 @@ class Katalogkelas extends CI_Controller
             'gambar_kelas' => $cektblviewkelas['gambar_viewkelas']
         );
         $this->m_kelas->simpanPilihKelas($data);
-        redirect('user/kelas_belajar/index/' . $cektblviewkelas['id_viewkelas'] . '/' . $id_materikls['id_materi']);
+        redirect('user/kelas_belajar/index/' . $cektblviewkelas['id_viewkelas'] . '/' . $id_materikls['id_materi']);;
     }
 }

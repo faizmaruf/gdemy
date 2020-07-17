@@ -71,15 +71,15 @@
                 <div class="row">
                     <div class="col container">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <?= $kelas_sekarang['link_materi'] ?>
+                            <?= $detailmaterisekarang['id_materi']; ?>
                         </div>
                         <div class="mt-1">
-                            <?php $id_kelasSelanjutnya = $kelas_sekarang['id_kelas'] + 1; ?>
+                            <?php $id_kelasSelanjutnya = $kelas_sekarang['id_materi'] + 1; ?>
                             <?php $id_kelasKembali = $kelas_sekarang['id_kelas'] - 1; ?>
                             <a href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $id_kelasKembali  ?>" class="btn btn-light border  <?php if (($kelas_sekarang['id_kelas'] - 1) == "0") {
                                                                                                                                                 echo "disabled";
                                                                                                                                             } ?>">Kembali</a>
-                            <a href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $id_kelasSelanjutnya  ?>" class=" btn btn-info float-right"> Tandai Selesai & Lanjutkan</a>
+                            <a href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $kelas_sekarang['id_kelas'] . '/' . $id_kelasSelanjutnya  ?>" class=" btn btn-info float-right"> Tandai Selesai & Lanjutkan</a>
                         </div>
                     </div>
                 </div>
@@ -93,10 +93,11 @@
             <ul class="nav flex-column">
                 <?php foreach ($detailkelas as $dk) : ?>
                     <li class="nav-item mt-2">
-                        <a class="nav-link hvr-float-shadow <?php if (($kelas_sekarang['id_kelas']) == ($dk['id_kelas'])) {
-                                                                echo "active-sidebar";
-                                                            } ?> " href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $dk['id_kelas'] ?>">
+                        <a class="nav-link  <?php if (($kelas_sekarang['id_materi']) == ($dk['id_materi'])) {
+                                                echo "active-sidebar";
+                                            } ?> " href="<?= base_url() . 'user/kelas_belajar/index/' . $dk['id_kelas'] . '/' . $dk['id_materi'] ?>">
                             <?= $dk['nama_materi'] ?> <span class="sr-only">(current)</span>
+
                         </a>
                     </li>
                 <?php endforeach; ?>

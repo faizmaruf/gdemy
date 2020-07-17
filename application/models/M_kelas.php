@@ -12,6 +12,10 @@ class M_kelas extends CI_Model
     {
         return $this->db->get_where('tbl_detail_kelas', ['id_kelas' => $id])->row_array();
     }
+    public function getDetailMateriById($id)
+    {
+        return $this->db->get_where('tbl_detail_kelas', ['id_materi' => $id])->row_array();
+    }
 
     //simpan ke tbl_pilih kelas
     public function getAllPilihKelas()
