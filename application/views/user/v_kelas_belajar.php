@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/kelas_belajar.css' ?>">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="<?= base_url() . 'assets/images/logo-4.png' ?>" type="image/gif" sizes="16x16">
 </head>
 
 <body>
@@ -74,8 +75,12 @@
                             <?= $kelas_sekarang['link_materi'] ?>
                         </div>
                         <div class="mt-1">
-                            <a href="#" class="btn btn-light border">Kembali</a>
-                            <a href="#" class="btn btn-info float-right">Tandai Selesai & Lanjutkan</a>
+                            <?php $id_kelasSelanjutnya = $kelas_sekarang['id_kelas'] + 1; ?>
+                            <?php $id_kelasKembali = $kelas_sekarang['id_kelas'] - 1; ?>
+                            <a href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $id_kelasKembali  ?>" class="btn btn-light border <?php if (($kelas_sekarang['id_kelas'] - 1) == "0") {
+                                                                                                                                                echo "disabled";
+                                                                                                                                            } ?>">Kembali</a>
+                            <a href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $id_kelasSelanjutnya  ?>" class=" btn btn-info float-right"> Tandai Selesai & Lanjutkan</a>
                         </div>
                     </div>
                 </div>
@@ -89,7 +94,9 @@
             <ul class="nav flex-column">
                 <?php foreach ($detailkelas as $dk) : ?>
                     <li class="nav-item mt-2">
-                        <a class="nav-link active-sidebar" href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $dk['id_kelas'] ?>">
+                        <a class="nav-link <?php if (($kelas_sekarang['id_kelas']) == ($dk['id_kelas'])) {
+                                                echo "active-sidebar";
+                                            } ?> " href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $dk['id_kelas'] ?>">
                             <?= $dk['nama_materi'] ?> <span class="sr-only">(current)</span>
                         </a>
                     </li>
