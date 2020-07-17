@@ -24,6 +24,7 @@ class Kelas_belajar extends CI_Controller
         $email = $this->session->userdata('email');
         $x['user'] = $this->m_user->getuserbyemail($email);
         $x['detailkelas'] = $this->m_kelas->getAllDetailKelas($id);
+        $x['kelas_sekarang'] = $this->m_kelas->getDetailKelasById($id);
         $x['active'] = 'kelas_belajar';
         $this->load->view('user/v_kelas_belajar', $x);
     }

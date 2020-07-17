@@ -22,15 +22,11 @@ class M_kelas extends CI_Model
     {
         return $this->db->get_where('tbl_pilihkelas', ['id_viewkelas' => $id])->row_array();
     }
-    function getkelasbyemail($email)
+
+    function getkelasbyId($id, $email)
     {
-        return $this->db->get_where('tbl_pilihkelas', ['email' => $email])->row_array();
+        return $this->db->query("SELECT * FROM tbl_pilihkelas WHERE id_viewkelas='$id' AND email='$email'")->row_array();
     }
-    //get email di tbl pilihkelas by kolom email
-    // function getkelasbyemailCol($email)
-    // {
-    //     return $this->db->get('tbl_pilihkelas')->column_array();
-    // }
 
     function getPilihkelasbyemail($email)
     {
