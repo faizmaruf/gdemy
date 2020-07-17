@@ -8,11 +8,6 @@ class M_kelas extends CI_Model
         return $this->db->get('tbl_viewkelas')->result_array();
     }
 
-    public function getAllDetailKelas()
-    {
-        return $this->db->get('tbl_detail_kelas')->result_array();
-    }
-
     public function getDetailKelasById($id)
     {
         return $this->db->get_where('tbl_detail_kelas', ['id_kelas' => $id])->row_array();
@@ -23,10 +18,19 @@ class M_kelas extends CI_Model
     {
         return $this->db->get('tbl_pilihkelas')->result_array();
     }
+    public function getAllPilihKelasById($id)
+    {
+        return $this->db->get_where('tbl_pilihkelas', ['id_viewkelas' => $id])->row_array();
+    }
     function getkelasbyemail($email)
     {
         return $this->db->get_where('tbl_pilihkelas', ['email' => $email])->row_array();
     }
+    //get email di tbl pilihkelas by kolom email
+    // function getkelasbyemailCol($email)
+    // {
+    //     return $this->db->get('tbl_pilihkelas')->column_array();
+    // }
 
     function getPilihkelasbyemail($email)
     {
@@ -43,5 +47,11 @@ class M_kelas extends CI_Model
     function simpanPilihKelas($data)
     {
         $this->db->insert('tbl_pilihkelas', $data);
+    }
+
+    //tampilkan data detail materi berdasarkan id viewkelas
+    public function getAllDetailKelas($id)
+    {
+        return $this->db->get_where('tbl_detail_kelas', ['id_kelas' => $id])->result_array();
     }
 }

@@ -31,6 +31,7 @@
     <section class="kelas">
         <div class="album py-5">
             <div class="container">
+                <?= $this->session->flashdata('message'); ?>
                 <div class="row">
                     <?php foreach ($tbl_viewkelas as $vk) { ?>
                         <div class="col-md-4 mb-5">
