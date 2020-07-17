@@ -77,7 +77,7 @@
                         <div class="mt-1">
                             <?php $id_kelasSelanjutnya = $kelas_sekarang['id_kelas'] + 1; ?>
                             <?php $id_kelasKembali = $kelas_sekarang['id_kelas'] - 1; ?>
-                            <a href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $id_kelasKembali  ?>" class="btn btn-light border <?php if (($kelas_sekarang['id_kelas'] - 1) == "0") {
+                            <a href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $id_kelasKembali  ?>" class="btn btn-light border  <?php if (($kelas_sekarang['id_kelas'] - 1) == "0") {
                                                                                                                                                 echo "disabled";
                                                                                                                                             } ?>">Kembali</a>
                             <a href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $id_kelasSelanjutnya  ?>" class=" btn btn-info float-right"> Tandai Selesai & Lanjutkan</a>
@@ -94,9 +94,9 @@
             <ul class="nav flex-column">
                 <?php foreach ($detailkelas as $dk) : ?>
                     <li class="nav-item mt-2">
-                        <a class="nav-link <?php if (($kelas_sekarang['id_kelas']) == ($dk['id_kelas'])) {
-                                                echo "active-sidebar";
-                                            } ?> " href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $dk['id_kelas'] ?>">
+                        <a class="nav-link hvr-float-shadow <?php if (($kelas_sekarang['id_kelas']) == ($dk['id_kelas'])) {
+                                                                echo "active-sidebar";
+                                                            } ?> " href="<?= base_url() . 'user/katalogkelas/kelassaya/' . $dk['id_kelas'] ?>">
                             <?= $dk['nama_materi'] ?> <span class="sr-only">(current)</span>
                         </a>
                     </li>
