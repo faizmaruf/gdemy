@@ -24,9 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |
 <<<<<<< HEAD
 */
-=======
- */
->>>>>>> bebdb12be4068e07f19b741a6e3befe162e8773a
+
 $config['base_url'] = 'http://localhost/gdemy/';
 
 /*
