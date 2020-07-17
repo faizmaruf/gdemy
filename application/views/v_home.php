@@ -3,6 +3,7 @@
 <!-- head -->
 <?php $this->load->view('v_head'); ?>
 <!-- head-end -->
+
 <body>
     <!-- navbar -->
     <?php $this->load->view('v_navbar'); ?>
@@ -70,7 +71,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card card-border mb-4 shadow-sm">
+                        <div class="card hvr-float-shadow mb-4 shadow-sm">
                             <div class="card-header">
                                 <div class="card-img-top d-flex justify-content-center mb-3 mt-5">
                                     <div class="p-3 border-bottom50">
@@ -88,7 +89,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card card-border mb-4 shadow-sm">
+                        <div class="card hvr-float-shadow mb-4 shadow-sm">
                             <div class="card-header">
                                 <div class="card-img-top d-flex justify-content-center mb-3 mt-5">
                                     <div class="p-3 border-bottom50">
@@ -106,7 +107,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card card-border mb-4 shadow-sm">
+                        <div class="card hvr-float-shadow mb-4 shadow-sm">
                             <div class="card-header">
                                 <div class="card-img-top d-flex justify-content-center mb-3 mt-5">
                                     <div class="p-3 border-bottom50">
@@ -130,7 +131,7 @@
     <div>
         <div class="mt-5">
             <div class="col-sm-12 d-flex justify-content-center">
-                <a class="btn btn-cta btn-primary " href="<?php echo site_url().'signup'?>" role="button">Coba</a>
+                <a class="btn btn-cta btn-primary hvr-float-shadow" href="<?php echo site_url() . 'signup' ?>" role="button">Coba</a>
             </div>
         </div>
     </div>
@@ -152,16 +153,13 @@
     </footer>
     <!-- footer-end  -->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
 
 

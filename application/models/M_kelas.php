@@ -50,4 +50,9 @@ class M_kelas extends CI_Model
     {
         return $this->db->get_where('tbl_detail_kelas', ['id_kelas' => $id])->result_array();
     }
+
+    function get_all_materi_id($id)
+    {
+        return $this->db->get_where('tbl_detail_kelas', ['id_materi' => $id])->row_array();
+    }
 }

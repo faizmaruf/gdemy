@@ -34,7 +34,7 @@
                 <div class="row">
                     <?php foreach ($tbl_viewkelas as $vk) { ?>
                         <div class="col-md-4 mb-5">
-                            <div class="card-1 card-border mb-4 shadow-sm bg-white shadow-lg">
+                            <div class="card-1 hvr-float-shadow mb-4 shadow-sm bg-white shadow-lg">
                                 <div class="card-header bg-white">
                                     <div class="card-img-top ">
                                         <div class="row p-3">
